@@ -11,7 +11,7 @@
     min-width: 100vw;
 
     background: url("@/assets/images/background-2.jpg") fixed no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 * {

@@ -29,7 +29,7 @@ export default class YHeader extends Vue {
   justify-content: space-evenly;
   align-items: center;
   height: 2.5rem;
-  width: 80%;
+  width: 90vw;
   margin-top: 1rem;
   border-radius: 1rem;
   background-color: var(--header-bg-color);
