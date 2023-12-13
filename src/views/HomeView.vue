@@ -28,15 +28,17 @@
       <y-hats/>
     </div>
   </div>
+  <y-arrow-block/>
 </template>
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
 import YHats from "@/components/YHats.vue";
+import YArrowBlock from "@/components/UI/YArrowBlock.vue";
 
 @Options({
   name: 'HomeView',
-  components: {YHats},
+  components: {YArrowBlock, YHats},
 })
 export default class HomeView extends Vue {
 
@@ -50,6 +52,7 @@ export default class HomeView extends Vue {
   grid-template-columns: 1fr min-content;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 3rem;
 }
 
 .hats {
