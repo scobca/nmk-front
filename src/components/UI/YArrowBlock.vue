@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper ">
-    <img src="@/assets/svg/arrow_down.svg" alt="" class="image">
+    <img src="../../assets/svg/arrow-down-transparent.svg" alt="" class="image">
   </div>
 </template>
 
@@ -36,6 +36,6 @@ export default class YArrowBlock extends Vue {
 }
 
 .image {
-  height: 2rem;
+  height: 1.25rem;
 }
 </style>

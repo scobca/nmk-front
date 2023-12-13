@@ -84,7 +84,7 @@ export default class HomeView extends Vue {
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--card-bg-color);
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 1.5rem;
   text-align: left;
   min-height: 30vh;
@@ -102,7 +102,7 @@ export default class HomeView extends Vue {
 }
 
 .button {
-  width: 90%;
+  width: 100%;
   font-size: 1.25rem;
   background-color: var(--card-button-color);
   margin-top: 2rem;
