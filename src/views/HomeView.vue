@@ -77,10 +77,14 @@ export default class HomeView extends Vue {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--card-bg-color);
   padding: 1rem;
   border-radius: 1.5rem;
   text-align: left;
+  min-height: 30vh;
 }
 
 .card_header {
