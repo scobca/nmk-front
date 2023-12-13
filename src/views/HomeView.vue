@@ -1,34 +1,42 @@
 <template>
-  <div class="container">
-    <div class="card_block">
-      <div class="card">
-        <p class="card_header">AR / VR -</p>
-        <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+  <div class="grid_container">
+    <div class="container">
+      <div class="card_block">
+        <div class="card">
+          <p class="card_header">AR / VR -</p>
+          <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
 
-        <div class="button">
-          <p class="button_text">Подробнее об этом</p>
-          <img src="@/assets/svg/right-arrow.svg" alt="" class="img">
+          <div class="button">
+            <p class="button_text">Подробнее об этом</p>
+            <img src="@/assets/svg/right-arrow.svg" alt="" class="img">
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="card_header">AR / VR -</p>
+          <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+
+          <div class="button">
+            <p class="button_text">Как это можно реализовать?</p>
+            <img src="@/assets/svg/right-arrow.svg" alt="" class="img">
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="card">
-        <p class="card_header">AR / VR -</p>
-        <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-
-        <div class="button">
-          <p class="button_text">Как это можно реализовать?</p>
-          <img src="@/assets/svg/right-arrow.svg" alt="" class="img">
-        </div>
-      </div>
+    <div class="hats">
+      <y-hats/>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
+import YHats from "@/components/YHats.vue";
 
 @Options({
   name: 'HomeView',
+  components: {YHats},
 })
 export default class HomeView extends Vue {
 
@@ -36,8 +44,24 @@ export default class HomeView extends Vue {
 </script>
 
 <style scoped>
+.grid_container {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hats {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10vw;
+  margin-top: 2rem;
+  justify-content: center;
+  scale: 130%;
+}
+
 .container {
-  min-width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
