@@ -26,18 +26,6 @@ export default class YHeader extends Vue {
 </script>
 
 <style scoped>
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-}
-
-.home_icon {
-  margin-bottom: -1.1rem;
-  z-index: 10;
-}
-
 .container {
   display: flex;
   justify-content: space-around;
@@ -51,10 +39,6 @@ export default class YHeader extends Vue {
   font-weight: 500;
 }
 
-.icon {
-  height: 1.5rem;
-}
-
 .block {
   display: flex;
   flex-direction: row;
@@ -63,7 +47,7 @@ export default class YHeader extends Vue {
   transition-duration: 0.3s;
 }
 
-.block:hover, .home_icon:hover {
+.block:hover {
   scale: 110%;
   transition-duration: 0.3s;
 }
