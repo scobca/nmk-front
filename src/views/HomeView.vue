@@ -28,17 +28,28 @@
       <y-hats/>
     </div>
   </div>
-  <y-arrow-block/>
+
+  <y-arrow-block class="arrow_block"/>
+
+  <div class="texts_block">
+    <y-text-card :route="'media'" :header="'Текст 1'"
+                 class="text_card animate__animated animate__fadeInLeft"/>
+    <y-text-card :route="'media'" :header="'Текст 2'"
+                 class="text_card animate__animated animate__delay-1s animate__fadeInLeft"/>
+    <y-text-card :route="'media'" :header="'Текст 3'"
+                 class="text_card animate__animated animate__delay-2s animate__fadeInLeft"/>
+  </div>
 </template>
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
 import YHats from "@/components/YHats.vue";
 import YArrowBlock from "@/components/UI/YArrowBlock.vue";
+import YTextCard from "@/components/UI/YTextCard.vue";
 
 @Options({
   name: 'HomeView',
-  components: {YArrowBlock, YHats},
+  components: {YTextCard, YArrowBlock, YHats},
 })
 export default class HomeView extends Vue {
 
@@ -72,6 +83,23 @@ export default class HomeView extends Vue {
   margin-top: 10vh;
 }
 
+.texts_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.text_card {
+  scale: 100%;
+  transition-duration: .75s;
+}
+
+.text_card:hover {
+  scale: 105%;
+  transition-duration: 0.75s;
+}
+
 .card_block {
   width: 35vw;
   display: flex;
@@ -88,6 +116,13 @@ export default class HomeView extends Vue {
   border-radius: 1.5rem;
   text-align: left;
   min-height: 30vh;
+  scale: 100%;
+  transition-duration: 0.75s;
+}
+
+.card:hover {
+  scale: 105%;
+  transition-duration: 0.75s;
 }
 
 .card_header {
@@ -115,5 +150,9 @@ export default class HomeView extends Vue {
 
 .img {
   height: 1.75rem;
+}
+
+.arrow_block {
+  margin-bottom: 4rem;
 }
 </style>
