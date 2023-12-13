@@ -6,6 +6,8 @@ import store from './store'
 //importing local styles
 import '@/assets/styles/main.css'
 import '@/assets/styles/colors.css'
+import '@/assets/styles/animations.css'
+import '@/assets/styles/scrollbar.css'
 
 //importing animations libraries
 import 'aos/dist/aos.css';
